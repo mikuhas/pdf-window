@@ -6,15 +6,12 @@ export type PdfInfo = {
   message: string;
 };
 
-export const doGetWindowInfo = (ids: string[]): PdfInfo[] => {
-  console.log(`${[...ids]}を使用してPDFのデータを取得します。`);
-
-  return ids.map((id) => ({
+export const doGetWindowInfo = (ids: string[]): PdfInfo[] =>
+  ids.map((id) => ({
     id,
     title: "PDF 見出し",
     message: `PDFメッセージ ${id}`,
   }));
-};
 
 export const pdfInfoListVar = makeVar<PdfInfo[]>([]);
 

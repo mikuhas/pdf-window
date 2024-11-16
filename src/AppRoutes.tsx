@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, RouteProps, Routes } from "react-router-dom";
-import { App } from "./App";
+import { Parent } from "./Parent";
 import { Child } from "./Child";
 
 export const AppRoutes = () => {
   const routes = [
     {
       path: "/",
-      Component: App,
+      Component: Parent,
     },
     {
       path: "/child",

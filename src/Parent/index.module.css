@@ -1,5 +1,28 @@
+.headerContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.headerText {
+  font-size: 20px;
+}
+
 .container {
-  width:400px;
-  height:600px;
-  border:1px solid #1f1f1f
+  display: grid;
+  place-items: center;
+}
+
+.inner {
+  margin:auto;
+}
+
+.box {
+  border:1px solid #1f1f1f;
+  overflow-y: scroll;
+  margin:auto;
+  width:500px;
+  height:700px;
 }

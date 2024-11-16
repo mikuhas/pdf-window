@@ -28,7 +28,9 @@ export const MiniWindow: React.FC<Props> = ({ requestIds, onGetData }) => {
 
   return (
     <div className={styles.container}>
-      <h1>【見出し】</h1>
+      <div className={styles.headerContainer}>
+        <div className={styles.m1HeaderText}>PDFプレビュー画面を作成</div>
+      </div>
       <>
         {pdfInfoList.map(({ id, title, message }) => (
           <div key={id}>

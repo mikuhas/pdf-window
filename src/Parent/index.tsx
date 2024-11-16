@@ -15,18 +15,22 @@ export const Parent = () => {
     window.addEventListener("message", (e) => {
       if (openWindow && e.data.isReceived) {
         openWindow.postMessage({ requestIds: requestIds });
-        setOpenWindow(null)
+        setOpenWindow(null);
       }
     });
   }, [openWindow]);
 
   return (
-    <>
-      <header>プレビュー</header>
-      <button onClick={handleClick}>印刷する</button>
-      <div className={styles.container}>
-        <MiniWindow requestIds={requestIds} />
+    <div className={styles.container}>
+      <div className={styles.inner}>
+        <div className={styles.headerContainer}>
+          <div className={styles.headerText}>プレビュー</div>
+          <button onClick={handleClick}>印刷する</button>
+        </div>
+        <div className={styles.box}>
+          <MiniWindow requestIds={requestIds} />
+        </div>
       </div>
-    </>
+    </div>
   );
 };
